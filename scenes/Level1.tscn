@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b08nms1nlykpd"]
+
+[ext_resource type="PackedScene" uid="uid://bvoacsv0vkdl5" path="res://scenes/Player.tscn" id="1_6ovph"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bwv4p"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_bwv4p")
+
+[node name="Player" parent="." instance=ExtResource("1_6ovph")]
+position = Vector2(-763, -34)
+scale = Vector2(1.12069, 1.14232)
