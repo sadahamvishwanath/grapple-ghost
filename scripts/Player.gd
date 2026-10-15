@@ -103,6 +103,10 @@ func _physics_process(delta: float) -> void:
 			var radial_speed: float = velocity.dot(radial)
 			velocity -= radial * radial_speed
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):  # Esc by default
+		get_tree().change_scene_to_file("res://ui/LevelSelect.tscn")
+	# ... keep your existing grapple input here
 
 func _process(_delta: float) -> void:
 	if is_grappling:

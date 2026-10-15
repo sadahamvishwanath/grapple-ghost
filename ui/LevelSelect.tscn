@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo5qgp31bcqtp"]
+
+[ext_resource type="Script" uid="uid://d4lq5la2s06d6" path="res://ui/LevelSelect.gd" id="1_dlyx1"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_dlyx1")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Margin" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="UI/Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/Margin/VBox"]
+layout_mode = 2
+text = "Select Level"
+
+[node name="Grid" type="GridContainer" parent="UI/Margin/VBox"]
+layout_mode = 2
+columns = 3
+
+[node name="BackButton" type="Button" parent="UI/Margin/VBox"]
+layout_mode = 2
+text = "Back"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://coirs4ith0lcs"]
+
+[ext_resource type="Script" uid="uid://dsdm88631obow" path="res://ui/MainMenu.gd" id="1_b00nv"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_b00nv")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Center" type="CenterContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="UI/Center"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/Center/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "GRAPPLE GHOST"
+
+[node name="Spacer" type="Control" parent="UI/Center/VBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="UI/Center/VBox"]
+layout_mode = 2
+text = "Play"
+
+[node name="LevelSelectButton" type="Button" parent="UI/Center/VBox"]
+layout_mode = 2
+text = "Level Select"
+
+[node name="QuitButton" type="Button" parent="UI/Center/VBox"]
+layout_mode = 2
+text = "Quit"

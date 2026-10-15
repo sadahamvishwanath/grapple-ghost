@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="GrappleGhost"
-run/main_scene="uid://ckd0ei36yas5y"
+run/main_scene="uid://coirs4ith0lcs"
 config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+GameState="*res://scripts/GameState.gd"
 
 [display]
 
