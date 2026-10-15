@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var level_number: int = 1
+@export var level_number: int = 5
 
 @onready var player: CharacterBody2D = $Player
 @onready var exit: Area2D = $Exit

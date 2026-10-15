@@ -13,6 +13,7 @@ size = Vector2(40, 40)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_32mhh")
+level_number = 1
 
 [node name="Player" parent="." instance=ExtResource("1_6ovph")]
 position = Vector2(60, -70)
@@ -66,7 +67,7 @@ scale = Vector2(2.503, 1)
 color = Color(0.00189471, 0.0974868, 0.000839575, 1)
 
 [node name="Block" type="StaticBody2D" parent="."]
-position = Vector2(452, -240)
+position = Vector2(303, -228)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
 position = Vector2(20, 20)

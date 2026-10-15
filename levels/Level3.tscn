@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwwa8sns6uhao"]
+[gd_scene load_steps=7 format=3 uid="uid://h8vewfwre2tk"]
 
+[ext_resource type="Script" uid="uid://d0dfpyg5jty6p" path="res://scripts/Level.gd" id="1_3ns6d"]
 [ext_resource type="PackedScene" uid="uid://bvoacsv0vkdl5" path="res://scenes/Player.tscn" id="1_gq8fh"]
+[ext_resource type="PackedScene" uid="uid://c4gtvvljimfqm" path="res://ui/LevelHUD.tscn" id="3_mmhpo"]
+[ext_resource type="PackedScene" uid="uid://dfk3uh07yqnt4" path="res://scenes/Exit.tscn" id="4_rd3y7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ovph"]
 size = Vector2(1030, 32)
@@ -8,7 +11,9 @@ size = Vector2(1030, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bwv4p"]
 size = Vector2(40, 40)
 
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_3ns6d")
+level_number = 3
 
 [node name="Player" parent="." instance=ExtResource("1_gq8fh")]
 position = Vector2(60, -70)
@@ -62,7 +67,7 @@ scale = Vector2(2.503, 1)
 color = Color(0.00189471, 0.0974868, 0.000839575, 1)
 
 [node name="Block" type="StaticBody2D" parent="."]
-position = Vector2(452, -240)
+position = Vector2(464, -58)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
 position = Vector2(20, 20)
@@ -72,3 +77,35 @@ shape = SubResource("RectangleShape2D_bwv4p")
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0.86269, 0, 1)
+
+[node name="Block2" type="StaticBody2D" parent="."]
+position = Vector2(462, -217)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block2"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_bwv4p")
+
+[node name="ColorRect" type="ColorRect" parent="Block2"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.86269, 0, 1)
+
+[node name="Block3" type="StaticBody2D" parent="."]
+position = Vector2(731, -298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block3"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_bwv4p")
+
+[node name="ColorRect" type="ColorRect" parent="Block3"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.86269, 0, 1)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(107, -243)
+
+[node name="LevelHUD" parent="." instance=ExtResource("3_mmhpo")]
+
+[node name="Exit" parent="." instance=ExtResource("4_rd3y7")]
+position = Vector2(750, -332)
