@@ -33,12 +33,12 @@ to have a finished, playable game in my portfolio.
 ## Features
 
 - [x] Player movement (run, jump)
-- [ ] Dash
-- [ ] Grappling hook
-- [ ] 5 short levels
-- [ ] Timer + best times
-- [ ] Ghost replay of best run
-- [ ] Main menu + level select
+- [x] Dash
+- [x] Grappling hook
+- [x] 5 short levels
+- [x] Timer + best times
+- [x] Ghost replay of best run
+- [x] Main menu + level select
 - [ ] Web export
 
 ## Tech
