@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfk3uh07yqnt4"]
+
+[ext_resource type="Script" uid="uid://cg6so31mcttrb" path="res://scripts/Exit.gd" id="1_c4vl1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhnsb"]
+size = Vector2(31, 63)
+
+[node name="Exit" type="Area2D"]
+position = Vector2(53, 34)
+script = ExtResource("1_c4vl1")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_yhnsb")
+
+[node name="Visual" type="ColorRect" parent="."]
+offset_left = -15.0
+offset_top = -32.0
+offset_right = 17.0
+offset_bottom = 32.0
+color = Color(0.713078, 0.00241231, 0.926794, 1)

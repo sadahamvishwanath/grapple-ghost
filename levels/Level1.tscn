@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b08nms1nlykpd"]
+[gd_scene load_steps=7 format=3 uid="uid://b08nms1nlykpd"]
 
 [ext_resource type="PackedScene" uid="uid://bvoacsv0vkdl5" path="res://scenes/Player.tscn" id="1_6ovph"]
+[ext_resource type="Script" uid="uid://d0dfpyg5jty6p" path="res://scripts/Level.gd" id="1_32mhh"]
+[ext_resource type="PackedScene" uid="uid://c4gtvvljimfqm" path="res://ui/LevelHUD.tscn" id="3_ohbkr"]
+[ext_resource type="PackedScene" uid="uid://dfk3uh07yqnt4" path="res://scenes/Exit.tscn" id="4_2j4y6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ovph"]
 size = Vector2(1030, 32)
@@ -9,6 +12,7 @@ size = Vector2(1030, 32)
 size = Vector2(40, 40)
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_32mhh")
 
 [node name="Player" parent="." instance=ExtResource("1_6ovph")]
 position = Vector2(60, -70)
@@ -72,3 +76,11 @@ shape = SubResource("RectangleShape2D_bwv4p")
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0.86269, 0, 1)
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(76, -135)
+
+[node name="LevelHUD" parent="." instance=ExtResource("3_ohbkr")]
+
+[node name="Exit" parent="." instance=ExtResource("4_2j4y6")]
+position = Vector2(1005, -52)
