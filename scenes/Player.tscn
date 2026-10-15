@@ -18,3 +18,9 @@ shape = SubResource("RectangleShape2D_mdl7e")
 
 [node name="Camera" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+
+[node name="Rope" type="Line2D" parent="."]
+width = 4.0
+default_color = Color(0.658173, 0, 0.0379616, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
